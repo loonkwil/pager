@@ -1,0 +1,23 @@
+{
+    "name": "spe/pager-utilities",
+    "description": "Lapozo gyartasahoz szukseges szamok generalasa",
+    "homepage": "https://github.com/loonkwil/pager-utilities",
+    "type": "symfony-bundle",
+    "repositories":[
+        {
+            "type":"git",
+            "url":"git://github.com/loonkwil/pager-utilities.git"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Peter Simon",
+            "email": "simonpepe@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "SPE\\PagerUtilitiesBundle": "" }
+    },
+    "target-dir": "SPE/PagerUtilitiesBundle"
+}
+
