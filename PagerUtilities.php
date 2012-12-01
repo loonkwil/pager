@@ -50,6 +50,39 @@ class PagerUtilities
 
 
     /**
+     * @return integer
+     */
+    public function getNumberOfItems()
+    {
+        return $this->numberOfItems;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getItemsInOnePage()
+    {
+        return $this->itemsInOnePage;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getCurrentPage()
+    {
+        return $this->currentPage;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNumberOfPages()
+    {
+        return $this->numberOfPages;
+    }
+
+
+    /**
      * Szukseges-e a lapozo (egynel tobb oldal van-e)
      *
      * @return boolean
@@ -86,16 +119,6 @@ class PagerUtilities
         $ret = $this->currentPage * $this->itemsInOnePage;
 
         return ( $ret > $this->numberOfItems ) ? $this->numberOfItems : $ret;
-    }
-
-    /**
-     * Hany elem van egy oldalon
-     *
-     * @return integer
-     */
-    public function getItemsInOnePage()
-    {
-        return $this->itemsInOnePage;
     }
 
     /**
