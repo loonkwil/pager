@@ -50,6 +50,16 @@ class PagerUtilities
 
 
     /**
+     * Szukseges-e a lapozo (egynel tobb oldal van-e)
+     *
+     * @return boolean
+     */
+    public function haveToPagignate()
+    {
+        return $this->numberOfPages > 1;
+    }
+
+    /**
      * Az aktualis oldalon hanyadik termektol kezdodoen lathatoak a talalatok
      *
      * @return integer
@@ -99,7 +109,7 @@ class PagerUtilities
     }
 
     /**
-     * Utolso oldal. Ha az utolso oldalon allok null-t ad vissza, ha nem 
+     * Utolso oldal. Ha az utolso oldalon allok null-t ad vissza, ha nem
      * visszaadja az utolso oldal szamat
      *
      * @return integer|null
@@ -114,7 +124,7 @@ class PagerUtilities
     }
 
     /**
-     * Elozo oldal. Ha az eslo oldalon allok null-t ad vissza, ha nem akkor az 
+     * Elozo oldal. Ha az eslo oldalon allok null-t ad vissza, ha nem akkor az
      * elozo oldal szamat
      *
      * @return integer|null
@@ -139,7 +149,7 @@ class PagerUtilities
     }
 
     /**
-     * Kovetkezo oldal. Ha az utolso oldalon allok null-t ad vissza, ha nem 
+     * Kovetkezo oldal. Ha az utolso oldalon allok null-t ad vissza, ha nem
      * visszaadja a kovetkezo oldal szamat
      *
      * @return integer|null
@@ -156,7 +166,7 @@ class PagerUtilities
      * Visszaadja az aktualis oldal szomszedjait.
      * pl.: 5 eseten 4, 5, (6), 7, 8 vagy 1 (2) 3 4 5
      *
-     * @param integer $showNPages = 5 Osszesen ennyi elemt adok vissza (ha van 
+     * @param integer $showNPages = 5 Osszesen ennyi elemt adok vissza (ha van
      * ennyi)
      *
      * @return array

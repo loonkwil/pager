@@ -14,6 +14,24 @@ class PagerUtilitiesTest extends \PHPUnit_Framework_TestCase
      * @param integer $currentPage = 1 Melyik oldalon allok
      */
 
+    public function testHaveToPagignate()
+    {
+        $pu = new PagerUtilities(1, 10, 0);
+        $this->assertEquals($pu->haveToPagignate(), false);
+
+        $pu = new PagerUtilities(1, 10, 1);
+        $this->assertEquals($pu->haveToPagignate(), false);
+
+        $pu = new PagerUtilities(20, 10, 2);
+        $this->assertEquals($pu->getItemsFrom(), true);
+
+        $pu = new PagerUtilities(20, 10, 0);
+        $this->assertEquals($pu->getItemsFrom(), true);
+
+        $pu = new PagerUtilities(20, 10, 1);
+        $this->assertEquals($pu->getItemsFrom(), true);
+    }
+
     public function testGetItemsFrom()
     {
         $pu = new PagerUtilities(1, 10, 0);
