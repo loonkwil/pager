@@ -1,5 +1,7 @@
 # Pager
 
+[![Build Status](https://travis-ci.org/loonkwil/pager.png)](https://travis-ci.org/loonkwil/pager)
+
 ## Install
 
 composer.json:
