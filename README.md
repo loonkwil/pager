@@ -1,36 +1,36 @@
-# Installálás
+# Pager
 
-composer.json fájlba:
-```
+## Install
+
+composer.json:
+```json
 "repositories": [
     ...
     {
         "type": "vcs",
-        "url": "https://github.com/loonkwil/pager-utilities.git"
+        "url": "https://github.com/loonkwil/pager.git"
     },
     ...
 ],
 "require": {
     ...
-    "spe/pager-utilities": "dev-master",
+    "spe/pager": "dev-master",
     ...
 }
 ```
 
-```
+```bash
 php composer.phar update
 ```
 
-# Használata
+# Usage
 
-controller rétegben:
-
-```
+```php
 <?php
 
 // ...
 
-use SPE\PagerUtilitiesBundle\PagerUtilities;
+use SPE\Pager\Pager;
 
 class DefaultController extends Controller
 {
@@ -57,9 +57,7 @@ class DefaultController extends Controller
 }
 ```
 
-view rétegben:
-
-```
+```twig
 {% if pages.prev %}
   <a href="{{ path('list_news', { page: pages.prev }) }}">prev</a>
 {% endif %}

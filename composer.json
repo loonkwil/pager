@@ -1,12 +1,12 @@
 {
-    "name": "spe/pager-utilities",
-    "description": "Lapozo gyartasahoz szukseges szamok generalasa",
-    "homepage": "https://github.com/loonkwil/pager-utilities",
+    "name": "spe/pager",
+    "description": "Useful class for generating paginator",
+    "homepage": "https://github.com/loonkwil/pager",
     "type": "symfony-bundle",
     "repositories":[
         {
             "type":"git",
-            "url":"git://github.com/loonkwil/pager-utilities.git"
+            "url":"git://github.com/loonkwil/pager.git"
         }
     ],
     "authors": [
@@ -16,8 +16,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "SPE\\PagerUtilitiesBundle": "" }
+        "psr-0": { "SPE\\Pager": "" }
     },
-    "target-dir": "SPE/PagerUtilitiesBundle"
+    "target-dir": "SPE/Pager"
 }
-
